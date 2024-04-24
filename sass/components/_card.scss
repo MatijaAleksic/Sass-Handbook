@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+.card {
+    max-width: 80%;
+    margin: 3%;
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
+
+    .card-title{    
+        font-size: $base-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body{
+        font-size: $font-size-lg;
+
+        a{
+            text-decoration: underline;
+        }
+    }
+}
+
+//Ako hocemo da ispisemo nesto na konzolu da vidimo koja ce vrednosti biti
+// @debug "Hello world!";
+// @debug math.div(10,3);

@@ -1,0 +1,19 @@
+//INPORT ORDER MATTERS - moraju da se importuju biblioteke koje su prve potrebne pa onda ostale
+
+//variables & functions
+@import "functions";
+@import "variables";
+
+//base & layout
+@import "base";
+
+//colors
+@import "colors";
+
+//components(button, card, navbar)
+// @import 'example';
+@import "components/card";
+@import "components/button";
+
+//utilities (margin, padding, opacity)
+@import "utilities";

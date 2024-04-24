@@ -1,0 +1,8 @@
+@function light-comp($color) {
+  //nadji komplementarnu boju date boje
+  $complement: complement($color);
+
+  //built in funkcija za osvetli boju
+  $light-complement: lighten($complement, 30%);
+  @return $light-complement;
+}

@@ -4,14 +4,14 @@
 
  //Funkcija koja ce compile Sass => Css i pipe ga u neki file
  function buildStyles(){
-    return src('index.scss')
+    return src('sass/**/*.scss')
         .pipe(sass())
         .pipe(dest('css'))
  }
 
- function watchTask(){
-    watch(['index.scss'], buildStyles)
+ //Watcher koji gleda kod i kada dodje do promjene opet se poziva buildStyles
+ function watchTask(){ 
+    watch(['sass/**/*.scss'], buildStyles)
  }
 
- export default series(buildStyles, watchTask);
-//  export default series(buildStyles, watchTask)
+ exports.default =  series(buildStyles, watchTask);
