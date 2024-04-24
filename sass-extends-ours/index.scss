@@ -1,0 +1,8 @@
+//Ovo je samo primer kako se extenduje custom sass i onda overriduju vrednosti
+//Da bi ovo radilo na sassu mora da postoji !default vrednost za ove stvari da bi override mogao da bude odradjen
+//Takodje treba da se konfigurise (gulpfile.js) da bi gledao promjene na ovome sass-u a ne na custom sasu
+$primary: indigo;
+$base-padding: 1rem;
+$base-border-thickness: 3px;
+
+@import "sass";

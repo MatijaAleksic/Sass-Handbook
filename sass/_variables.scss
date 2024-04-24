@@ -3,30 +3,30 @@
 
 //theme colors
 $primary: #326dee !default; //Asignuje boju na primary samo ako primary = undefined ili null
-$secondary: #1ac886 !default;
+$secondary: #1ac886 !default; //Ako nego hoce da extenduje nas sass on to moze jel smo ovdje naveli da ako on nije stavi ovu boju
 $error: #d32752 !default;
 $info: #f6c31c !default;
 
 //color palette
 $colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-    "error": $error,
-    "info": $info,
-    "blue": #1919e6,
-    "red": #e61919,
-    "yellow": #e6e619,
-    "green": #19e635,
-    "orange": #ffa600,
-    "purple": #9900ff,
-    "gray": #808080,
-    "black": black,
-    "white": white,
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "blue": #1919e6,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
 );
 
 //USE - kada se ovako navedu kao gore, onda se ovako uzimaju negdje u kodu
 .test-btn {
-    background-color: map-get($colors, "primary");
+  background-color: map-get($colors, "primary");
 }
 
 //Ako se ovako definisu boje, ovako moze da se pristupi tim vrednostima
@@ -36,18 +36,18 @@ $colors: (
 // @debug map-remove($colors, "primary" );
 // @debug map-merge($colors, ("pink": #ffc0cb));
 
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
 
-$base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
 
 //box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
 
 //font sizes
 $base-font-size: 1rem;
-$font-size-sm: $base-font-size * 0.75;
-$font-size-lg: $base-font-size * 1.5;
-$font-size-xl: $base-font-size * 2;
-$font-size-xxl: $base-font-size * 3;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
